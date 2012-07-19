@@ -1,5 +1,6 @@
 [
   { "caption": "File: Rename", "command": "rename_file" },
   { "caption": "File: Duplicate", "command": "duplicate_file" },
-  { "caption": "File: Delete", "command": "delete_file" }
+  { "caption": "File: Delete", "command": "delete_current_file" },
+  { "caption": "File: Edit", "command": "edit_file" }
 ]
