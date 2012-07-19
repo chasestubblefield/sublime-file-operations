@@ -1,4 +1,8 @@
 Sublime Text 2 File Operations
 ------------------------------
 
-⌥⌘N
+Adds the following commands to the comamnd palette (⇧⌘P):
+
+* File: Rename
+* File: Duplicate
+* File: Delete
