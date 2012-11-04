@@ -50,6 +50,15 @@ class DeleteCurrentFileCommand(sublime_plugin.WindowCommand):
     if v:
       send2trash(v.file_name())
 
+class CopyNameCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        if len(self.view.file_name()) > 0:
+            sublime.set_clipboard(os.path.basename(self.view.file_name()))
+            sublime.status_message("Copied file name")
+
+    def is_enabled(self):
+        return self.view.file_name() and len(self.view.file_name()) > 0
+
 def ask_for_name_relative_to_active_view(window, on_done):
   old_path = window.active_view().file_name()
   branch, leaf = os.path.split(old_path)

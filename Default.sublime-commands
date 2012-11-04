@@ -2,5 +2,7 @@
   { "caption": "File: Rename", "command": "rename_file" },
   { "caption": "File: Duplicate", "command": "duplicate_file" },
   { "caption": "File: Delete", "command": "delete_current_file" },
-  { "caption": "File: Edit", "command": "edit_file" }
+  { "caption": "File: Edit", "command": "edit_file" },
+  { "caption": "File: Copy Path", "command": "copy_path" },
+  { "caption": "File: Copy Name", "command": "copy_name"}
 ]
