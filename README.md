@@ -7,3 +7,5 @@ Adds the following commands to the command palette (⇧⌘P):
 * File: Duplicate
 * File: Delete
 * File: Edit (open arbitrary path)
+* File: Copy Path
+* File: Copy Name
