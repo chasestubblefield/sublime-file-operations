@@ -4,5 +4,6 @@
   { "caption": "File: Delete", "command": "delete_current_file" },
   { "caption": "File: Edit", "command": "edit_file" },
   { "caption": "File: Copy Path", "command": "copy_path" },
-  { "caption": "File: Copy Name", "command": "copy_name"}
+  { "caption": "File: Copy Name", "command": "copy_name"},
+  { "caption": "File: Copy Relative Path", "command": "copy_relative_path"}
 ]

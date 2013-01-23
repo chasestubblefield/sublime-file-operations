@@ -61,12 +61,21 @@ class DeleteCurrentFileCommand(sublime_plugin.WindowCommand):
 
 class CopyNameCommand(sublime_plugin.TextCommand):
   def run(self, edit):
-    if len(self.view.file_name()) > 0:
-      sublime.set_clipboard(os.path.basename(self.view.file_name()))
-      sublime.status_message("Copied file name")
+    basename = os.path.basename(self.view.file_name())
+    sublime.set_clipboard(basename)
+    sublime.status_message("Copied " + basename + " to clipboard")
 
   def is_enabled(self):
     return self.view.file_name() and len(self.view.file_name()) > 0
+
+class CopyRelativePathCommand(sublime_plugin.WindowCommand):
+  def run(self):
+    relative_path = os.path.relpath(self.window.active_view().file_name(), self.window.folders()[0])
+    sublime.set_clipboard(relative_path)
+    sublime.status_message("Copied " + relative_path + " to clipboard")
+
+  def is_enabled(self):
+    return len(self.window.folders()) > 0 and self.window.active_view() and len(self.window.active_view().file_name()) > 0
 
 def ask_for_name_relative_to_active_view(window, on_done):
   old_path = window.active_view().file_name()
