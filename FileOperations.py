@@ -1,7 +1,6 @@
 import sublime, sublime_plugin
 import shutil
 import os
-from send2trash import send2trash
 
 class EditFileCommand(sublime_plugin.WindowCommand):
 
@@ -54,7 +53,7 @@ class DeleteCurrentFileCommand(sublime_plugin.WindowCommand):
 
     v = self.window.active_view()
     if v:
-      send2trash(v.file_name())
+      os.remove(v.file_name())
 
   def is_enabled(self):
       return self.window.active_view() != None
